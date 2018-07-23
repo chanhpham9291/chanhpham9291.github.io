@@ -206,11 +206,22 @@ var monsterinsights_frontend = {"js_events_tracking":"true","is_debug_mode":"fal
 	<script>
 	function closeWebview()
 	{
-		document.location.href = 'kixeye://webview/close';
-		if(window != null && window.JsInterface != null && window.JsInterface.hideWebView != null)
+		if (window.navigator.userAgent.indexOf("Android") != -1)
 		{
-			window.JsInterface.hideWebView();
+			if(window != null && window.JsInterface != null && window.JsInterface.hideWebView != null)
+			{
+				window.JsInterface.hideWebView();
+			}
 		}
+		
+		if (window.navigator.userAgent.indexOf("iOS") != -1)
+		{
+			if(document != null && document.location != null && document.location.href != null)
+			{
+				document.location.href = 'kixeye://webview/close';
+			}
+		}
+
 	}
 	</script>
 </body>
