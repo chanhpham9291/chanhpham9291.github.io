@@ -198,18 +198,18 @@ var monsterinsights_frontend = {"js_events_tracking":"true","is_debug_mode":"fal
 	<meta name="google-site-verification" content="5WCKu1UR9P_YnGlNLoTiTWnU1JY3K6cqlwjSAKhdErc" />
 </head>
 <body class="page-template page-template-news-transmission page-template-news-transmission-php page page-id-680 group-blog">
-	<button onclick="document.location.href = 'kixeye://webview/close'">Close via JavaScript</button>
+	<button onclick="closeWebview()">Close via JavaScript</button>
     <div class="wrapper">
 		<div id="news-parent"></div>
     </div>
     <script type='text/javascript' src='https://warcommander.com/wp-includes/js/wp-embed.min.js'></script>
-</body>
-<script>
-	function close()
+	<script>
+	function closeWebview()
 	{
-		console.log('close');
+		console.log('closeWebview');
 		document.location.href = 'kixeye://webview/close';
 		window.JsInterface.hideWebView();
 	}
-</script>
+	</script>
+</body>
 </html>
