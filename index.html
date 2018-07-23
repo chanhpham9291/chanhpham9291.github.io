@@ -206,10 +206,10 @@ var monsterinsights_frontend = {"js_events_tracking":"true","is_debug_mode":"fal
 	<script>
 	function closeWebview()
 	{
-		let androidRegExp = /Android/g;
-		let iosRegExp = /iPad|iPhone|iPod/g;
+		let androidPatt = /Android/;
+		let iosPatt = /iPad|iPhone|iPod/;
 		
-		if (androidRegExp.test(window.navigator.userAgent))
+		if (androidPatt.test(window.navigator.userAgent))
 		{
 			if(window != null && window.JsInterface != null && window.JsInterface.hideWebView != null)
 			{
@@ -217,12 +217,9 @@ var monsterinsights_frontend = {"js_events_tracking":"true","is_debug_mode":"fal
 			}
 		}
 		
-		if (iosRegExp.test(window.navigator.userAgent))
+		if (iosPatt.test(window.navigator.userAgent))
 		{
-			if(document != null && document.location != null)
-			{
-				document.location.href = 'kixeye://webview/close';
-			}
+			document.location.href = 'kixeye://webview/close';
 		}
 
 	}
