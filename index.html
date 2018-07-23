@@ -206,8 +206,10 @@ var monsterinsights_frontend = {"js_events_tracking":"true","is_debug_mode":"fal
 	<script>
 	function closeWebview()
 	{
-		console.log(window.navigator.userAgent);
-		if (window.navigator.userAgent.indexOf("Android") != -1)
+		let androidRegExp = new RegExp("Android");
+		let iosRegExp = new RegExp("iOS");
+		
+		if (androidRegExp.test(window.navigator.userAgent))
 		{
 			if(window != null && window.JsInterface != null && window.JsInterface.hideWebView != null)
 			{
@@ -215,7 +217,7 @@ var monsterinsights_frontend = {"js_events_tracking":"true","is_debug_mode":"fal
 			}
 		}
 		
-		if (window.navigator.userAgent.indexOf("iOS") != -1)
+		if (iosRegExp.test(window.navigator.userAgent))
 		{
 			if(document != null && document.location != null)
 			{
