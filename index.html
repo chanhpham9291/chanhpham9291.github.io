@@ -206,9 +206,11 @@ var monsterinsights_frontend = {"js_events_tracking":"true","is_debug_mode":"fal
 	<script>
 	function closeWebview()
 	{
-		console.log('closeWebview');
 		document.location.href = 'kixeye://webview/close';
-		window.JsInterface.hideWebView();
+		if(window != null && window.JsInterface != null && window.JsInterface.hideWebView != null)
+		{
+			window.JsInterface.hideWebView();
+		}
 	}
 	</script>
 </body>
