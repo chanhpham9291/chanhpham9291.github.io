@@ -195,10 +195,17 @@ var monsterinsights_frontend = {"js_events_tracking":"true","is_debug_mode":"fal
 			});
 		});
 	</script>
+	<script>
+		function close()
+		{
+			window.JsInterface.hideWebView();
+			document.location.href = 'kixeye://webview/close';
+		}
+	</script>
 	<meta name="google-site-verification" content="5WCKu1UR9P_YnGlNLoTiTWnU1JY3K6cqlwjSAKhdErc" />
 </head>
 <body class="page-template page-template-news-transmission page-template-news-transmission-php page page-id-680 group-blog">
-	<button onclick="window.JsInterface.hideWebView();document.location.href = 'kixeye://webview/close';">Close via JavaScript</button>
+	<button onclick="close();">Close via JavaScript</button>
     <div class="wrapper">
 		<div id="news-parent"></div>
     </div>
