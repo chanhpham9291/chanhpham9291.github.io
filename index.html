@@ -206,6 +206,7 @@ var monsterinsights_frontend = {"js_events_tracking":"true","is_debug_mode":"fal
 	<script>
 	function closeWebview()
 	{
+		console.log(window.navigator.userAgent);
 		if (window.navigator.userAgent.indexOf("Android") != -1)
 		{
 			if(window != null && window.JsInterface != null && window.JsInterface.hideWebView != null)
