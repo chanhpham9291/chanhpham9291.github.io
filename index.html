@@ -206,8 +206,8 @@ var monsterinsights_frontend = {"js_events_tracking":"true","is_debug_mode":"fal
 	<script>
 	function closeWebview()
 	{
-		let androidRegExp = new RegExp("Android");
-		let iosRegExp = new RegExp("iPad|iPhone|iPod");
+		let androidRegExp = /Android/g;
+		let iosRegExp = /iPad|iPhone|iPod/g;
 		
 		if (androidRegExp.test(window.navigator.userAgent))
 		{
